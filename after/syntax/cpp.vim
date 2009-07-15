@@ -27,8 +27,8 @@ endfunction
 
 
 set shellpipe=>\ %s\ 2>&1
-set makeprg=make
-" set makeprg=g++\ -o\ %:r\ %
+" set makeprg=make
+set makeprg=g++\ -o\ %:r\ %
 "set errorformat=%f:%l:%v:%*\\d:%*\\d:%*\\s%m
 
 command! -nargs=* Run call ProgRun(<f-args>)
@@ -44,17 +44,16 @@ endif
 "call IMAP('<+pattern+>','<+replacement+>','<+filetype+>')
 
 call IMAP('#inc','#include <<++>><++>','cpp')
-call IMAP('iout','#include <iostream>using namespace std;','cpp')
 
-call IMAP('inc<','#include <<++>><++>','cpp')
-call IMAP('iout','#include <iostream>using namespace std;','cpp')
-call IMAP('imain','int main(){<+block+>s	return 0;}<++>','cpp')
+call IMAP('inc<','#include <<++>><++>','cpp')
+call IMAP('iout','#include <iostream>using namespace std;','cpp')
+call IMAP('imain','int main(){<+block+>s	return 0;}<++>','cpp')
 
 call IMAP('if()', 'if(<++>)<++>', 'cpp')
 call IMAP('while()', 'while(<++>)<++>', 'cpp')
 call IMAP('for()','for(<+vars+>;<+condition+>;<+command+>)<++>','cpp')
 
-call IMAP('{}', '{<++>}', 'cpp')
+call IMAP('{}', '{<++>}<++>', 'cpp')
 
 call IMAP('()', '(<++>)<++>', 'cpp')
 call IMAP('[]', '[<++>]<++>', 'cpp')
