@@ -1,0 +1,24 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\headheight 15pt
+\headsep 7pt
+
+\lhead{Matthew Batema}
+\rhead{<+classname+>}
+
+\begin{document}
+Homework: <+assignment+>
+
+\begin{enumerate}
+\setcounter{enumi}{<+offset+>}
+\item<+woo+>
+\end{enumerate}
+
+\end{document}

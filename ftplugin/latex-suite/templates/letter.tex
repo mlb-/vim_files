@@ -1,0 +1,27 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[12pt]{letter}
+\begin{document}
+
+\address{
+<+street+> \\
+<+City+>, <+State+> <+zip+>
+}
+\name{<+Your Name+>}
+
+\begin{letter}{
+<+Recipient+> \\
+<+street+> \\
+<+City+>, <+State+> <+zip+>
+}
+\opening{<+Salutations+>}
+
+<+letter+>
+
+\closing{<+Sincerely+>}
+
+\end{letter}
+\end{document}

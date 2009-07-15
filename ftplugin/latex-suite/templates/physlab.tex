@@ -1,0 +1,36 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+
+\begin{document}
+
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
+Matthew Batema	&	Lab Partner: <+name+> \\
+Phys 270	&	<+another name+>\\
+\end{tabular*}
+\end{center}
+
+Experiment \#<+lab number+> -- <+lab name+>
+
+\begin{description}
+\item[Purpose:]
+<+the purpose+>
+\item[Procedure:]
+<+procedure+>
+\item[Data:]
+<+data, probably a table+>
+\item[Calculations:]\ %
+\begin{enumerate}
+\item	<+step one+>
+\end{enumerate}
+\item[Sources of error:]
+<+where/what was wrong+>
+\item[Conclusion:]
+<+conclusion, fool+>
+\end{description}
+
+\end{document}
