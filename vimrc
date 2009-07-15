@@ -15,15 +15,15 @@ set backspace=2
 set grepprg=grep\ -nH\ $*
 set showtabline=2
 
-set cf
+set cf			" Confirm shit.
 set cmdheight=2
-set lz
+set lz			" lazy redraw
 set whichwrap+=<,>,h,l
 set shortmess=aI
 set report=0
-set noeb
-set fo=tcrqn
-set noet
+set noeb		" silence those fucking bells
+set fo=tcrqn		" formatting opts
+set noet		" no expand tab
 set guioptions-=T
 
 
@@ -61,7 +61,11 @@ silent! exe a:firstline . ',' . a:lastline . 's/\v%(^ *)@<= {'. a:width .'}/\t/g
 endfunction
 
 let g:Tex_DefaultTargetFormat="pdf"
-let g:Tex_ViewRule_pdf = '/usr/bin/evince'
+if has('macunix')
+	let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app/'
+else
+	let g:Tex_ViewRule_pdf = '/usr/bin/evince'
+endif
 
 let g:miniBufExplTabWrap = 1 " make tabs show complete (no broken on two lines)
 let g:miniBufExplModSelTarget = 1

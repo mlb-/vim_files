@@ -249,8 +249,7 @@ function! Tex_ViewLaTeX()
 		if strlen(s:viewer)
 			let s:viewer = '-a '.s:viewer
 		endif
-		let execString = 'open $*.'.s:target
-		"let execString = 'open '.s:viewer.' $*.'.s:target
+		let execString = 'open '.s:viewer.' $*.'.s:target
 
 	else
 		" taken from Dimitri Antoniou's tip on vim.sf.net (tip #225).

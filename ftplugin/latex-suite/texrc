@@ -136,11 +136,25 @@ TexLet g:Tex_UseMakefile = 1
 "       the filename.
 " NOTE: Windows users:
 " 		Set your $PATH variable to include the full path to these programs.
+if has('win32')
+	TexLet g:Tex_ViewRule_ps = 'gsview32'
+	TexLet g:Tex_ViewRule_pdf = 'AcroRd32'
+	TexLet g:Tex_ViewRule_dvi = 'yap -1'
+elseif has('macunix')
 	" Let the system pick.  If you want, you can override the choice here.
 	TexLet g:Tex_ViewRule_ps = ''
 	TexLet g:Tex_ViewRule_pdf = ''
 	" TexLet g:Tex_ViewRule_pdf = 'Acrobat\ Reader\ 5.1'
 	TexLet g:Tex_ViewRule_dvi = ''
+else
+	TexLet g:Tex_ViewRule_ps = 'ghostview'
+	TexLet g:Tex_ViewRule_pdf = 'xpdf'
+	TexLet g:Tex_ViewRule_dvi = 'xdvi'
+	" the option below specifies an editor for the dvi viewer while starting
+	" up the dvi viewer according to Dimitri Antoniou's tip on vim.sf.net (tip
+	" #225)
+	TexLet g:Tex_UseEditorSettingInDVIViewer = 0
+endif
 
 " Tex_ViewRuleComplete_{format}
 "
