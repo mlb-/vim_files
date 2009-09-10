@@ -1,5 +1,5 @@
 
-set nocp		" vim, fuck yeah!
+set nocompatible	" vim, fuck yeah!
 set nu			" line numbers
 set ai			" autoindent
 set si			" smartindent
@@ -8,7 +8,8 @@ set nohls		" Don't highlight results
 set is			" highlight while searching
 set ruler		" show cursor location
 set showcmd		" show partial commands
-set modeline		" good shit
+set modeline
+set modelines=5		" good shit
 set history=5		" keep 50 lines of command line history
 set mouse=a		" mouse support
 set backspace=2
@@ -26,6 +27,7 @@ set fo=tcrqn		" formatting opts
 set noet		" no expand tab
 set guioptions-=T
 
+set t_Co=256
 
 colo elflord
 syntax on
