@@ -80,7 +80,7 @@ autocmd BufEnter * :syntax sync fromstart " ensure every file does syntax highli
 " map <down> gj
 " map <up> gk
 map <right> <ESC>\mbe " right arrow (normal mode) brings up the buffer list
-map <F2> <ESC>ggVG:call SuperRetab()<left>
+"map <F2> <ESC>ggVG:call SuperRetab()<left>
 
 " strip trailing spaces
 nmap \w :%s/[\t ]\+$//g
