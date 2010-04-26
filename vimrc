@@ -27,6 +27,10 @@ set fo=tcrqn		" formatting opts
 set noet		" no expand tab
 set guioptions-=T
 
+set listchars=tab:»·,trail:· ",eol:$
+set list
+
+
 set t_Co=256
 
 colo elflord
@@ -63,11 +67,7 @@ silent! exe a:firstline . ',' . a:lastline . 's/\v%(^ *)@<= {'. a:width .'}/\t/g
 endfunction
 
 let g:Tex_DefaultTargetFormat="pdf"
-if has('macunix')
-	let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app/'
-else
-	let g:Tex_ViewRule_pdf = '/usr/bin/evince'
-endif
+let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app/'
 
 let g:miniBufExplTabWrap = 1 " make tabs show complete (no broken on two lines)
 let g:miniBufExplModSelTarget = 1
