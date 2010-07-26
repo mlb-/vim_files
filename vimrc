@@ -35,6 +35,11 @@ set t_Co=256
 
 colo elflord
 syntax on
+
+" Force reloading of filetype
+filetype off
+call pathogen#runtime_append_all_bundles() 
+
 filetype on
 filetype plugin on
 filetype indent on
@@ -55,15 +60,8 @@ augroup vimrcEx
 				\ endif
 augroup END
 
-function! CleverTab()
-	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-		return "\<Tab>"
-	else
-		return "\<C-N>"
-endfunction
-" inoremap <Tab> <C-R>=CleverTab()<CR>
 function! SuperRetab(width) range
-silent! exe a:firstline . ',' . a:lastline . 's/\v%(^ *)@<= {'. a:width .'}/\t/g'
+	silent! exe a:firstline . ',' . a:lastline . 's/\v%(^ *)@<= {'. a:width .'}/\t/g'
 endfunction
 
 let g:Tex_DefaultTargetFormat="pdf"
@@ -77,13 +75,15 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 
 autocmd BufEnter * :syntax sync fromstart " ensure every file does syntax highlighting (full)
 
-" map <down> gj
-" map <up> gk
-map <right> <ESC>\mbe " right arrow (normal mode) brings up the buffer list
-"map <F2> <ESC>ggVG:call SuperRetab()<left>
+map <down> gj
+map <up> gk
+" right arrow (normal mode) brings up the buffer list
+map <right> <ESC>\mbe
+map <F2> <ESC>ggVG:call SuperRetab()<left>
 
 " strip trailing spaces
 nmap \w :%s/[\t ]\+$//g
 
 let g:Tex_CompileRule_pdf =  'pdflatex -shell-escape -interaction=nonstopmode $*'
+
 " vi:fdm=indent
