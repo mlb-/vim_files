@@ -27,9 +27,6 @@ set fo=tcrqn		" formatting opts
 set noet		" no expand tab
 set guioptions-=T
 
-set listchars=tab:»·,trail:· ",eol:$
-set list
-
 
 set t_Co=256
 
@@ -38,6 +35,7 @@ syntax on
 
 " Force reloading of filetype
 filetype off
+call pathogen#helptags() 
 call pathogen#runtime_append_all_bundles() 
 
 filetype on
