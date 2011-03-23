@@ -40,3 +40,9 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/imaps"]
+	path = bundle/imaps
+	url = https://github.com/vim-scripts/imaps.vim.git
+[submodule "bundle/latex-suite"]
+	path = bundle/latex-suite
+	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
