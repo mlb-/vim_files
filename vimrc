@@ -30,13 +30,15 @@ set guioptions-=T
 
 set t_Co=256
 
-colo elflord
 syntax on
 
 " Force reloading of filetype
 filetype off
 call pathogen#helptags() 
 call pathogen#runtime_append_all_bundles() 
+
+set background="light"
+colo vividchalk
 
 filetype on
 filetype plugin on
