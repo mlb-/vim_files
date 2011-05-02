@@ -46,3 +46,6 @@
 [submodule "bundle/latex-suite"]
 	path = bundle/latex-suite
 	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
+[submodule "vimerl"]
+	path = vimerl
+	url = https://github.com/oscarh/vimerl.git
