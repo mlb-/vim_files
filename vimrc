@@ -34,7 +34,6 @@ set showmatch		" highlight matching % when on cursor's on one
 
 " Search settings
 nnoremap / /\v
-inoremap / /\v
 set ignorecase		" case insensitive matching
 set smartcase		" case sensitive matching if term contains capitls
 set gdefault		" /g auto-appended to s/foo/bar/ append manually to undo
