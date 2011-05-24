@@ -26,7 +26,8 @@ set smartindent		" auto-indent on {, } and keywords
 set showcmd		" show partial commands
 set wildmenu		" show list of : commands
 set wildmode="list:longest"	" default was "full"
-"set cursorline		" underline which line cursor is on
+set cursorline		" underline which line cursor is on
+set cursorcolumn	" underline which column cursor is on
 set ttyfast		" because we don't live in the good ol' 9600 baud days
 
 set ruler		" show cursor location
@@ -108,5 +109,6 @@ map <F2> <ESC>ggVG:call SuperRetab()<left>
 nmap \w :%s/[\t ]\+$//g
 
 let g:Tex_CompileRule_pdf =  'pdflatex -shell-escape -interaction=nonstopmode $*'
+
 
 " vi:fdm=indent ts=8 sw=8
