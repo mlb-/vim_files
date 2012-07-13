@@ -7,6 +7,20 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " }}}
 
+" Look and feel -- otherwise it doesn't look "right" {{{
+	" Color schemes {{{
+	if has('gui_running')
+		Bundle 'jnurmine/Zenburn'
+		colorscheme zenburn
+	else
+		Bundle 'tpope/vim-vividchalk'
+		set background="dark"
+		colorscheme vividchalk
+	endif
+	" }}}
+" }}}
+
+
 syntax on
 
 set nocompatible	" vim, fuck yeah!
