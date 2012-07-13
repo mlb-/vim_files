@@ -24,6 +24,10 @@ Bundle 'gmarik/vundle'
 	endif
 	" }}}
 " }}}
+" Vimrc edit & reload {{{
+    nno <leader>Ve :tabedit $MYVIMRC<CR>
+    nno <leader>Vr :source $MYVIMRC<CR>
+" }}}
 
 
 set encoding=utf-8
