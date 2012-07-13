@@ -23,6 +23,14 @@ Bundle 'gmarik/vundle'
 		colorscheme vividchalk
 	endif
 	" }}}
+	" statusline {{{
+	" Always display statusline
+	set laststatus=2
+	" Powerline!
+	Bundle 'Lokaltog/vim-powerline'
+	" Retired statusline (I have powerline)
+	"set statusline=%n:%F\ %m%y%=%l/%L,\ %c%V\ %P
+	" }}}
 " }}}
 " Vimrc edit & reload {{{
     nno <leader>Ve :tabedit $MYVIMRC<CR>
