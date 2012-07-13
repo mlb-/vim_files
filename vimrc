@@ -6,7 +6,12 @@ set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 " }}}
-
+" Initialize {{{
+	let mapleader=","
+	set nocompatible	" Not compatible with vi -- vim, fuck yeah!
+	syntax on
+	filetype plugin indent on
+" }}}
 " Look and feel -- otherwise it doesn't look "right" {{{
 	" Color schemes {{{
 	if has('gui_running')
@@ -20,10 +25,6 @@ Bundle 'gmarik/vundle'
 	" }}}
 " }}}
 
-
-syntax on
-
-set nocompatible	" vim, fuck yeah!
 
 set encoding=utf-8
 set scrolloff=1		" lines of context for when at top/bottom of window
