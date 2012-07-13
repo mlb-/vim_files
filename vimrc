@@ -1,10 +1,4 @@
 
-" Force reloading of filetype
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
-
 syntax on
 
 set nocompatible	" vim, fuck yeah!
