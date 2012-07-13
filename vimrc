@@ -1,3 +1,11 @@
+" Vimrc of Matthew Batema
+
+" Vundle! {{{
+filetype off
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+" }}}
 
 syntax on
 
@@ -105,4 +113,4 @@ nmap \w :%s/[\t ]\+$//g
 let g:Tex_CompileRule_pdf =  'pdflatex -shell-escape -interaction=nonstopmode $*'
 
 
-" vi:fdm=indent ts=8 sw=8
+" vim: set fdm=marker:
