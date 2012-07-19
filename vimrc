@@ -77,8 +77,8 @@
 			if exists('+colorcolumn')
 				augroup colorcolumn
 					au!
-					au InsertEnter * set colorcolumn=+1
-					au InsertLeave * set colorcolumn=
+					autocmd InsertEnter * set colorcolumn=+1
+					autocmd InsertLeave * set colorcolumn=
 				augroup END
 			endif
 		" }}}
@@ -102,7 +102,6 @@
 
 		set noerrorbells		" silence those fucking bells
 		set guioptions-=T   " No toolbar
-		au VimResized * exe "normal! \<c-w>="
 	" }}}
 	" Text formatting {{{
 		" formatting options {{{
@@ -114,7 +113,8 @@
 				au!
 				autocmd FileType text,gitcommit setl formatoptions+=ta " autoformat text
 				autocmd FileType text,gitcommit setl formatoptions-=croq " not code
-				autocmd FileType text,gitcommit setl spell textwidth=72
+				autocmd FileType gitcommit setl spell textwidth=72
+				autocmd FileType text setl spell textwidth=78
 			augroup END
 		" }}}
 		set noet		" no expand tab
@@ -152,9 +152,29 @@
 		set whichwrap+=<,>,h,l
 	" }}}
 " }}}
-" re/un/wrap manipulation
-Bundle 'tpope/vim-surround'
+" Autocmd: {{{
+	augroup vimrcEx
+		au!
 
+		" Strip trailing whitespace before saving
+		autocmd BufWritePre * :%s/\s\+$//e
+
+		" When editing a file, always jump to the last known cursor position.
+		" Don't do it when the position is invalid or when inside an event handler
+		" (happens when dropping a file on gvim).
+		autocmd BufReadPost *
+					\ if line("'\"") > 0 && line("'\"") <= line("$") |
+					\   exe "normal g`\"" |
+					\ endif
+
+		" ensure every file does syntax highlighting (full)
+		autocmd BufEnter * :syntax sync fromstart
+
+		" Equally resize windows on vim window resize
+		autocmd VimResized * exe "normal! \<c-w>="
+
+	augroup END
+" }}}
 
 " Keybindings {{{
 	map <down> gj
