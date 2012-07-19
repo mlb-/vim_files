@@ -175,11 +175,93 @@
 
 	augroup END
 " }}}
-
 " Keybindings {{{
 	map <down> gj
 	map <up> gk
 " }}}
 
+" Erlang {{{
+	Bundle 'jimenezrick/vimerl'
+	" See ~/.vim/ftplugin/erlang.vim
+" }}}
+" Git! {{{
+	Bundle 'tpope/vim-fugitive'
+	" Cleanup fugitive buffers
+	augroup fugitive_bufclean
+		au!
+		autocmd BufReadPost fugitive://* set bufhidden=delete
+		autocmd BufReadPost fugitive://*
+					\ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+					\   nnoremap <buffer> .. :edit %:h<CR> |
+					\ endif
+	augroup END
+" }}}
+" LaTeX-suite (disabled) {{{
+	if 0
+	Bundle 'gerw/vim-latex-suite'
+	let g:Tex_DefaultTargetFormat="pdf"
+	if has('mac') || has('macunix')
+		let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app/'
+	endif
+	let g:Tex_CompileRule_pdf =  'pdflatex -shell-escape -interaction=nonstopmode $*'
+	endif
+" }}}
+" Syntastic! {{{
+	Bundle 'scrooloose/syntastic'
+	let g:syntastic_auto_loc_list=1
+" }}}
+" Tagbar! {{{
+	Bundle 'majutsushi/tagbar'
+	let g:tagbar_ctags_bin = '/usr/local/bin/exctags'
+	let g:tagbar_sort = 0
+	"let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
+	nnoremap <silent> <F7> :TagbarToggle<CR>
+" }}}
+" Tmux support {{{
+	Bundle 'ervandew/screen'
+	let g:ScreenImpl = 'Tmux'
+" }}}
+" R plugin, requires Tmux {{{
+	Bundle 'vim-scripts/Vim-R-plugin'
+	let vimrplugin_notmuxconf = 1
+	let g:vimrplugin_term_cmd = 'sh'
+" }}}
+
+" Miscellaneous vundles: {{{
+
+	" re/un/wrap manipulation
+	Bundle 'tpope/vim-surround'
+	" Extend bracket mappings
+	Bundle 'tpope/vim-unimpaired'
+	" FS tree nav
+	Bundle 'scrooloose/nerdtree'
+	" Buffer nav
+	Bundle 'jeetsukumaran/vim-buffergator'
+	" Let ^A/^X work on date/timestamps
+	Bundle 'tpope/vim-speeddating'
+	" Markdown syntax files
+	Bundle 'tpope/vim-markdown'
+	" Enable repeating various other tpope (surround, speeddating, abolish,
+	" unimpaired) with .
+	Bundle 'tpope/vim-repeat'
+	" Handle editing images where imagemagick is available
+	Bundle 'tpope/vim-afterimage'
+	" Pastie support
+	Bundle 'tpope/vim-pastie'
+	" Maximize gvim windows automatically
+	if has('win32')
+		Bundle 'maximize.dll'
+	endif
+
+	" Probationary plugins:
+	" Tabular!
+	Bundle 'godlygeek/tabular'
+	" Gist support
+	Bundle 'mattn/gist-vim'
+	" Auto-input paired keys (parens, quotes, etc.)
+	"Bundle 'kana/vim-smartinput'
+	Bundle 'vim-scripts/YankRing.vim'
+	"Bundle 'kana/vim-tabpagecd'
+" }}}
 
 " vim: set fdm=marker:
