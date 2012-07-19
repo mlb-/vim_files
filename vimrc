@@ -7,6 +7,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " }}}
 " Initialize {{{
+	" Set for windows compatability {{{
+	if has('win32')
+		set runtimepath+=~/.vim,~/.vim/after
+	endif
+	" }}}
 	let mapleader=","
 	set nocompatible	" Not compatible with vi -- vim, fuck yeah!
 	syntax on
