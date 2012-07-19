@@ -31,6 +31,15 @@ Bundle 'gmarik/vundle'
 	" Retired statusline (I have powerline)
 	"set statusline=%n:%F\ %m%y%=%l/%L,\ %c%V\ %P
 	" }}}
+	" Set font (on windows){{{
+	if has('gui_running')
+		let g:Powerline_symbols = 'fancy'
+		if has('win32')
+			"set guifont=Lucida_Console:h9:cANSI
+			set guifont=Anonymous_Pro_for_Powerline:h11
+		endif
+	endif
+	" }}}
 " }}}
 " Vimrc edit & reload {{{
     nno <leader>Ve :tabedit $MYVIMRC<CR>
@@ -97,10 +106,6 @@ set guioptions-=T
 
 
 set t_Co=256
-
-
-set background="light"
-colo vividchalk
 
 
 " Put these in an autocmd group, so that we can delete them easily.
