@@ -36,6 +36,20 @@ Bundle 'gmarik/vundle'
     nno <leader>Ve :tabedit $MYVIMRC<CR>
     nno <leader>Vr :source $MYVIMRC<CR>
 " }}}
+" Search settings {{{
+" \v prefix makes use of perl-style regexps
+nnoremap / /\v
+" use selection to search with
+vmap / y/<C-R>"<CR>
+set ignorecase	" Use case insensitive matching
+set smartcase		" ...except when term contains capital letters
+set gdefault		" Assume global behaviour on substitutions - append /g to undo
+"set hlsearch		" highlight results
+"set incsearch		" highlight while entering search terms (incrementally)
+" Show count of / results
+Bundle 'IndexedSearch'
+
+" }}}
 
 
 set encoding=utf-8
@@ -61,14 +75,6 @@ set ttyfast		" because we don't live in the good ol' 9600 baud days
 
 set ruler		" show cursor location
 set showmatch		" highlight matching % when on cursor's on one
-
-" Search settings
-nnoremap / /\v
-set ignorecase		" case insensitive matching
-set smartcase		" case sensitive matching if term contains capitls
-set gdefault		" /g auto-appended to s/foo/bar/ append manually to undo
-set hlsearch		" Don't highlight results
-set incsearch		" highlight while entering search terms (incrementally)
 
 set modeline
 set modelines=5		" good shit
