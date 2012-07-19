@@ -62,9 +62,9 @@ set gdefault		" Assume global behaviour on substitutions - append /g to undo
 "set incsearch		" highlight while entering search terms (incrementally)
 " Show count of / results
 Bundle 'IndexedSearch'
-
 " }}}
-
+" re/un/wrap manipulation
+Bundle 'tpope/vim-surround'
 
 set encoding=utf-8
 set scrolloff=1		" lines of context for when at top/bottom of window
