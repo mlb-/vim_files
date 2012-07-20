@@ -111,10 +111,10 @@
 			set formatoptions+=j		" Attempt to strip leading comment when using j
 			augroup formattext
 				au!
-				autocmd FileType text,gitcommit setl formatoptions+=ta " autoformat text
-				autocmd FileType text,gitcommit setl formatoptions-=croq " not code
+				autocmd FileType text,gitcommit,markdown setl formatoptions+=ta " autoformat text
+				autocmd FileType text,gitcommit,markdown setl formatoptions-=croq " not code
 				autocmd FileType gitcommit setl spell textwidth=72
-				autocmd FileType text setl spell textwidth=78
+				autocmd FileType text,markdown setl spell textwidth=78
 			augroup END
 		" }}}
 		set noet		" no expand tab
