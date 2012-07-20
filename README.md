@@ -6,7 +6,8 @@ I use [ghar](https://github.com/philips/ghar) to "install" .vim and .vimrc to ~/
 
     ghar add git@github.com:mlb-/vim_files &&\
     (cd ~/ghar/vim_files && git submodule update --init) &&\
-    ghar install
+    ghar install &&\
+    vim +BundleInstall! +:qa
 
 # Contents
 Hopefully, my .vimrc is well enough commented and organized to easily navigate.
