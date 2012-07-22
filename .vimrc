@@ -108,7 +108,9 @@
       set formatoptions-=t    " Don't attempt to format text
       set formatoptions+=n    " attempt to recognize numbered lists
       set formatoptions+=l    " Don't break a line in insert mode if already >textwidth
-      set formatoptions+=j    " Attempt to strip leading comment when using j
+      if v:version > 703 || v:version == 703 && has("patch550")
+        set formatoptions+=j    " Attempt to strip leading comment when using j
+      endif
       augroup formattext
         au!
         autocmd FileType text,gitcommit,markdown setl formatoptions+=ta " autoformat text
