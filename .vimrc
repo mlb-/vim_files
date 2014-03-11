@@ -262,7 +262,7 @@
   Bundle 'mattn/gist-vim'
   " Auto-input paired keys (parens, quotes, etc.)
   "Bundle 'kana/vim-smartinput'
-  Bundle 'vim-scripts/YankRing.vim'
+  "Bundle 'vim-scripts/YankRing.vim'
   "Bundle 'kana/vim-tabpagecd'
 " }}}
 
