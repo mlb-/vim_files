@@ -221,7 +221,10 @@ cmap w!! %!sudo tee > /dev/null %
 " }}}
 " Tagbar! {{{
   Bundle 'majutsushi/tagbar'
-  let g:tagbar_ctags_bin = '/usr/local/bin/exctags'
+  let g:tagbar_ctags_bin = '/usr/bin/ctags'
+  " let g:tagbar_type_javascript = {
+  "       \ 'ctagsbin' : '/usr/bin/jsctags'
+  "       \ }
   let g:tagbar_sort = 0
   "let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
   nnoremap <silent> <F7> :TagbarToggle<CR>
