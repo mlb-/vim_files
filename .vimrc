@@ -182,6 +182,8 @@
   map <up> gk
 " }}}
 
+cmap w!! %!sudo tee > /dev/null %
+
 " Erlang {{{
   Bundle 'jimenezrick/vimerl'
   " See ~/.vim/ftplugin/erlang.vim
