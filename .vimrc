@@ -247,6 +247,8 @@ cmap w!! %!sudo tee > /dev/null %
   Bundle 'tpope/vim-unimpaired'
   " FS tree nav
   Bundle 'scrooloose/nerdtree'
+  nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+
   " Buffer nav
   Bundle 'jeetsukumaran/vim-buffergator'
   " Let ^A/^X work on date/timestamps
@@ -274,6 +276,8 @@ cmap w!! %!sudo tee > /dev/null %
   "Bundle 'kana/vim-smartinput'
   "Bundle 'vim-scripts/YankRing.vim'
   "Bundle 'kana/vim-tabpagecd'
+  "Fuzzy match file opening
+  Bundle 'kien/ctrlp.vim'
 " }}}
 
 " vim: set fdm=marker et:
