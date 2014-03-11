@@ -271,7 +271,8 @@ cmap w!! %!sudo tee > /dev/null %
   " Tabular!
   Bundle 'godlygeek/tabular'
   " Gist support
-  Bundle 'mattn/gist-vim'
+  "Bundle 'mattn/gist-vim'
+  "Bundle 'mattn/webapi-vim'
   " Auto-input paired keys (parens, quotes, etc.)
   "Bundle 'kana/vim-smartinput'
   "Bundle 'vim-scripts/YankRing.vim'
