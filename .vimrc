@@ -188,6 +188,11 @@ cmap w!! %!sudo tee > /dev/null %
   Bundle 'jimenezrick/vimerl'
   " See ~/.vim/ftplugin/erlang.vim
 " }}}
+" Clojure {{{
+  Bundle 'tpope/vim-fireplace'
+  Bundle 'tpope/vim-classpath'
+  Bundle 'guns/vim-clojure-static'
+" }}}
 " Git! {{{
   Bundle 'tpope/vim-fugitive'
   " Cleanup fugitive buffers
