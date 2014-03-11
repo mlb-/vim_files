@@ -19,13 +19,14 @@
 " }}}
 " Look and feel -- otherwise it doesn't look "right" {{{
   " Color schemes {{{
+    set t_Co=256
     if has('gui_running')
       Bundle 'jnurmine/Zenburn'
       colorscheme zenburn
     else
       Bundle 'tpope/vim-vividchalk'
-      set background="dark"
       colorscheme vividchalk
+      set background=light
     endif
   " }}}
   " statusline {{{
@@ -84,7 +85,6 @@
     " }}}
 
     set encoding=utf-8
-    set t_Co=256
 
     set ttyfast   " because we don't live in the good ol' 9600 baud days
     set lazyredraw    " redraw screen after work happens
