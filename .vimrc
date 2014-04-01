@@ -184,6 +184,10 @@
 
 cmap w!! %!sudo tee > /dev/null %
 
+" {{{ Markdown
+  " syntax files
+  Bundle 'tpope/vim-markdown'
+" }}}
 " Erlang {{{
   Bundle 'jimenezrick/vimerl'
   " See ~/.vim/ftplugin/erlang.vim
@@ -253,8 +257,6 @@ cmap w!! %!sudo tee > /dev/null %
   Bundle 'jeetsukumaran/vim-buffergator'
   " Let ^A/^X work on date/timestamps
   Bundle 'tpope/vim-speeddating'
-  " Markdown syntax files
-  Bundle 'tpope/vim-markdown'
   " Enable repeating various other tpope (surround, speeddating, abolish,
   " unimpaired) with .
   Bundle 'tpope/vim-repeat'
