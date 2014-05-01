@@ -193,8 +193,10 @@ cmap w!! %!sudo tee > /dev/null %
   " See ~/.vim/ftplugin/erlang.vim
 " }}}
 " Clojure {{{
+  Bundle 'tpope/vim-leiningen'
+  Bundle 'tpope/vim-projectionist'
+  Bundle 'tpope/vim-dispatch'
   Bundle 'tpope/vim-fireplace'
-  Bundle 'tpope/vim-classpath'
   Bundle 'guns/vim-clojure-static'
 " }}}
 " Git! {{{
