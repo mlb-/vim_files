@@ -34,6 +34,11 @@
     set laststatus=2
     " Powerline!
     Bundle 'Lokaltog/vim-powerline'
+    " Prepare for the eventual deprecation of vim-powerline. Either move to
+    " something lighter-weight such as airline, or use the heavy successor to
+    " vim-powerline: powerline.
+    "" airline!
+    "Bundle 'bling/vim-airline'
     " Retired statusline (I have powerline)
     "set statusline=%n:%F\ %m%y%=%l/%L,\ %c%V\ %P
   " }}}
