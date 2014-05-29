@@ -283,6 +283,7 @@ cmap w!! %!sudo tee > /dev/null %
   "Bundle 'kana/vim-tabpagecd'
   "Fuzzy match file opening
   Bundle 'kien/ctrlp.vim'
+  Bundle 'mhinz/vim-signify'
 " }}}
 
 " vim: set fdm=marker et:
