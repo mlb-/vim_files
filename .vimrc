@@ -259,6 +259,13 @@ cmap w!! %!sudo tee > /dev/null %
   Bundle 'jeetsukumaran/vim-buffergator'
   " Let ^A/^X work on date/timestamps
   Bundle 'tpope/vim-speeddating'
+  Bundle 'kien/rainbow_parentheses.vim'
+	au VimEnter * RainbowParenthesesToggleAll
+	au Syntax * RainbowParenthesesLoadRound
+	au Syntax * RainbowParenthesesLoadSquare
+	au Syntax * RainbowParenthesesLoadBraces
+	au Syntax * RainbowParenthesesLoadChevrons
+
   " Enable repeating various other tpope (surround, speeddating, abolish,
   " unimpaired) with .
   Bundle 'tpope/vim-repeat'
