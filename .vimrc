@@ -296,6 +296,7 @@ cmap w!! %!sudo tee > /dev/null %
   "Fuzzy match file opening
   Bundle 'kien/ctrlp.vim'
   Bundle 'mhinz/vim-signify'
+  Bundle 'tpope/vim-characterize'
 " }}}
 
 " vim: set fdm=marker et:
