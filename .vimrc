@@ -284,10 +284,7 @@ cmap w!! %!sudo tee > /dev/null %
   " Probationary plugins:
   " Tabular!
   Bundle 'godlygeek/tabular'
-  " Auto-input paired keys (parens, quotes, etc.)
-  "Bundle 'kana/vim-smartinput'
   "Bundle 'vim-scripts/YankRing.vim'
-  "Bundle 'kana/vim-tabpagecd'
   "Fuzzy match file opening
   Bundle 'kien/ctrlp.vim'
   Bundle 'mhinz/vim-signify'
