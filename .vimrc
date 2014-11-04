@@ -244,11 +244,6 @@ cmap w!! %!sudo tee > /dev/null %
   Bundle 'ervandew/screen'
   let g:ScreenImpl = 'Tmux'
 " }}}
-" R plugin, requires Tmux {{{
-  Bundle 'vim-scripts/Vim-R-plugin'
-  let vimrplugin_notmuxconf = 1
-  let g:vimrplugin_term_cmd = 'sh'
-" }}}
 
 " Miscellaneous vundles: {{{
 
