@@ -284,7 +284,7 @@ cmap w!! %!sudo tee > /dev/null %
   " Probationary plugins:
   " Tabular!
   Bundle 'godlygeek/tabular'
-  "Bundle 'vim-scripts/YankRing.vim'
+  Bundle 'vim-scripts/YankRing.vim'
   "Fuzzy match file opening
   Bundle 'kien/ctrlp.vim'
   Bundle 'mhinz/vim-signify'
