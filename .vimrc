@@ -204,6 +204,8 @@ cmap w!! %!sudo tee > /dev/null %
   Bundle 'tpope/vim-fireplace'
   Bundle 'guns/vim-clojure-static'
   Bundle 'guns/vim-clojure-highlight'
+  Bundle 'guns/vim-sexp'
+  Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 " }}}
 " Git! {{{
   Bundle 'tpope/vim-fugitive'
